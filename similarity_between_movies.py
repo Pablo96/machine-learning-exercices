@@ -53,6 +53,7 @@ mappedColumnsMoviestat.columns=[f'{i}|{j}' if j != '' else f'{i}' for i,j in map
 df = mappedColumnsMoviestat.join(pd.DataFrame(similarMovies, columns=['similarity']))
 # Get the 15 most similar movies (highest correlation value)
 df = df.sort_values(['similarity'], ascending=False)[:15]
+
 print()
 print("similar movies")
 print(df.head(15))
