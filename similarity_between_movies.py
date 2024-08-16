@@ -38,7 +38,7 @@ movieStats = ratings.groupby('title').agg({'rating': [np.size, np.mean]})
 # Get rid of movies rated by less than 100 ppl
 # NOTE: DataFrame has the operator '>=' (and others)
 #   overloaded, so it creates a filter predicate
-popularMovies = movieStats['rating']['size'] >= 100
+popularMovies = movieStats['rating']['size'] >= 300
 # get the first 15 movies ordered by highest rating(mean) first
 # NOTE: the predicate is passed and the '[]' operator will
 #   use it to filter thos movies that dont match the filter
